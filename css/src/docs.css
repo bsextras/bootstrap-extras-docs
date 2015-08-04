@@ -1,0 +1,351 @@
+/* -----------------------------------------------------------------------------
+ * Bootstrap extras - CSS for docs site
+ * http://getbootstrap-extras.com
+ * Copyright 2015 Joseph Trumbull
+ * Licensed under MIT
+ * https://github.com/bsextras/bootstrap-extras/blob/master/LICENSE
+ * -------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+ * General
+ *
+ * Quick color reference:
+ * * #326292 : Base
+ * * #bdcddd : Light
+ * * #e1eaeb : Lighter
+ * * #f9f9f9 : Gray
+ *
+ * -------------------------------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+.table code {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+h2 code,
+h3 code,
+h4 code {
+  background-color: inherit;
+}
+
+/* -----------------------------------------------------------------------------
+ * Buttons for docs
+ * -------------------------------------------------------------------------- */
+
+.btn-outline {
+  color: #326292;
+  background-color: transparent;
+  border-color: #326292;
+}
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+  color: #fff;
+  background-color: #326292;
+  border-color: #326292;
+}
+
+/* Inverted outline button (white on dark) */
+.btn-outline-inverse {
+  color: #fff;
+  background-color: transparent;
+  border-color: #bdcddd;
+}
+
+.btn-outline-inverse:hover,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:active {
+  color: #326292;
+  text-shadow: none;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+/* -----------------------------------------------------------------------------
+ * Brand, Logo and Mark
+ * -------------------------------------------------------------------------- */
+.bsx-gh-pages-icon {
+  width: 144px;
+  height: 144px;
+  font-size: 108px;
+  letter-spacing: -13px;
+  line-height: 140px;
+  display: block;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+  padding-left: 15px;
+  cursor: default;
+  background-color: #326292;
+  border-radius: 15%;
+}
+
+.bsx-gh-pages-icon-inverse {
+  color: #326292;
+  background-color: #fff;
+}
+
+.bsx-gh-pages-icon-outline {
+  background-color: transparent;
+  border: 1px solid #bdcddd;
+}
+
+/* -----------------------------------------------------------------------------
+ * Skip navigation
+ * -------------------------------------------------------------------------- */
+
+.skip-nav {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.skip-nav-focusable:active,
+.skip-nav-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+.skip-nav-pretty {
+  display: block;
+  padding: 1em;
+  color: #fff;
+  background-color: #326292;
+  outline: 0;
+}
+
+.skip-nav-text {
+  padding: .5em;
+  outline: 1px dotted;
+}
+
+#content:focus {
+  outline: none;
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Navbar
+ * -------------------------------------------------------------------------- */
+
+.bsx-gh-pages-nav {
+  margin-bottom: 0;
+  background-color: #fff;
+  border-bottom: 0;
+}
+
+.bsx-gh-pages-nav .navbar-brand,
+.bsx-gh-pages-nav .navbar-nav > li > a {
+  font-weight: 500;
+  color: #326292;
+}
+
+.bsx-gh-pages-nav .navbar-nav > li > a:hover,
+.bsx-gh-pages-nav .navbar-nav > .active > a,
+.bsx-gh-pages-nav .navbar-nav > .active > a:hover {
+  color: #002F5F;
+  background-color: #f9f9f9;
+}
+
+.bsx-gh-pages-nav .navbar-toggle .icon-bar {
+  background-color: #326292;
+}
+
+.bsx-gh-pages-nav .navbar-header .navbar-toggle {
+  border-color: #fff;
+}
+
+.bsx-gh-pages-nav .navbar-header .navbar-toggle:hover,
+.bsx-gh-pages-nav .navbar-header .navbar-toggle:focus {
+  background-color: #f9f9f9;
+  border-color: #f9f9f9;
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Page heading
+ * -------------------------------------------------------------------------- */
+
+.bsx-gh-pages-bg,
+.bsx-gh-pages-bg-full {
+  background-color: #326292;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#326292), to(#6f5499));
+  background-image: -webkit-linear-gradient(top, #326292 0%, #6f5499 100%);
+  background-image: -o-linear-gradient(top, #326292 0%, #6f5499 100%);
+  background-image: linear-gradient(to bottom, #326292 0%, #6f5499 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#326292', endColorstr='#6F5499', GradientType=0);
+  background-repeat: repeat-x;
+}
+
+/* One-page style headeing for "Home" */
+
+.bsx-gh-pages-bg-full {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* Share masthead with page headers #563d7c > #6F5499 */
+.bsx-gh-pages-home .bsx-gh-pages-heading,
+.bsx-gh-pages-heading {
+  position: relative;
+  padding: 30px 0;
+  color: #bdcddd;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.bsx-gh-pages-home .bsx-gh-pages-heading {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.bsx-gh-pages-heading h1 {
+  margin-top: 0;
+  color: #e1eaeb;
+}
+
+.bsx-gh-pages-home .bsx-gh-pages-heading h1 {
+  font-weight: 300;
+  line-height: 1;
+  color: #fff;
+}
+
+.bsx-gh-pages-heading p {
+  margin-bottom: 0;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.bsx-gh-pages-home .bsx-gh-pages-heading .lead {
+  margin: 0 auto 30px;
+  font-size: 20px;
+  color: #e1eaeb;
+}
+
+.bsx-gh-pages-heading .container {
+  position: relative;
+}
+
+.bsx-gh-pages-home .bsx-gh-pages-heading .bsx-gh-pages-icon {
+  margin: 0 auto 30px;
+}
+
+.bsx-gh-pages-home .bsx-gh-pages-heading .version {
+  margin-right: 0;
+  margin-top: -15px;
+  margin-bottom: 30px;
+  color: #bdcddd;
+}
+
+.bsx-gh-pages-home .bsx-gh-pages-heading .btn {
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 20px;
+}
+
+@media (min-width: 480px) {
+  .bsx-gh-pages-home .bsx-gh-pages-heading .btn {
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .bsx-gh-pages-heading {
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .bsx-gh-pages-home .bsx-gh-pages-heading {
+    padding: 80px 0;
+  }
+
+  .bsx-gh-pages-heading h1 {
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  .bsx-gh-pages-home .bsx-gh-pages-heading h1 {
+    font-size: 60px;
+  }
+
+  .bsx-gh-pages-home .bsx-gh-pages-heading .lead {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bsx-gh-pages-heading h1,
+  .bsx-gh-pages-heading p {
+    margin-right: 380px;
+  }
+
+  .bsx-gh-pages-home .bsx-gh-pages-heading .lead {
+    width: 80%;
+    font-size: 30px;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+ * Footer
+ * -------------------------------------------------------------------------- */
+
+.bsx-gh-pages-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 100px;
+  color: #767676;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+}
+
+.bsx-gh-pages-footer-nav {
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.bsx-gh-pages-footer-nav li {
+  display: inline;
+  padding: 0 2px;
+}
+
+.bsx-gh-pages-footer-nav li:first-child {
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .bsx-gh-pages-footer p {
+    margin-bottom: 0;
+  }
+}
+
+/* Undo width of container */
+.bs-example .container {
+  width: auto;
+}

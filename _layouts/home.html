@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include head.html %}
+</head>
+<body class="bsx-gh-pages-{{ page.slug }}">
+
+  <div class="bsx-gh-pages-bg-full">
+
+    <!-- Skip nav for accessibility -->
+    {% include accessibility/skip-nav.html %}
+
+    <!-- Page header & navigation -->
+    {% include header.html %}
+
+    <main class="bsx-gh-pages-heading" id="content" role="main" tabindex="-1">
+      <div class="container">
+
+        <span class="bsx-gh-pages-icon bsx-gh-pages-icon-outline">Bx</span>
+        <p class="lead">{{ page.description }}</p>
+
+        <p class="lead">
+          <a href="getting-started#download" class="btn btn-outline-inverse btn-lg" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download {{ site.current_version }}');">Download {{ page.title }}</a>
+        </p>
+        <p class="version">Currently v{{ site.current_version }}</p>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Page content -->
+  {{ content }}
+
+  {% include footer.html %}
+  {% include scripts.html %}
+</body>
+</html>

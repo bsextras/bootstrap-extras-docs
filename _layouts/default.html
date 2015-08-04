@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Meta data and styles -->
+  {% include head.html %}
+
+</head>
+<body class="bsx-gh-pages-{{ page.slug }}">
+
+  <div class="bsx-gh-pages-bg">
+
+    <!-- Skip nav for accessibility -->
+    {% include accessibility/skip-nav.html %}
+
+    <!-- Page header & navigation -->
+    {% include header.html %}
+
+    <!-- Page title / description -->
+    <div class="bsx-gh-pages-heading" id="content" tabindex="-1">
+      <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.description }}</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div
+        class="col-md-{% if page.fullwidth == true %}12{% else %}9{% endif %}"
+        role="main">
+        {{ content }}
+      </div>
+
+      {% unless page.fullwidth == true %}
+      <aside class="col-md-3" role="complementary">
+        <nav class="">
+          <ul class="">
+          {% if page.slug == "getting-started" %}
+          {% include nav/side-getting-started.html %}
+          {% elsif page.slug == "css" %}
+          {% include nav/side-css.html %}
+          {% elsif page.slug == "components" %}
+          {% include nav/side-components.html %}
+          {% elsif page.slug == "js" %}
+          {% include nav/side-javascript.html %}
+          {% elsif page.slug == "customize" %}
+          {% include nav/side-customize.html %}
+          {% elsif page.slug == "about" %}
+          {% include nav/side-about.html %}
+          {% endif %}
+          </ul>
+          <a class="" href="#top">Back to top</a>
+        </nav>
+      </aside>
+      {% endunless %}
+
+    </div>
+
+  </div>
+
+  {% include footer.html %}
+  {% include scripts.html %}
+</body>
+</html>

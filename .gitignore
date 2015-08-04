@@ -23,3 +23,8 @@
 *.sublime-workspace
 nbproject
 Thumbs.db
+
+#ignore docs
+_site
+_test
+.sass-cache
